@@ -7,21 +7,18 @@ function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // Hook for programmatic navigation
-
+    const navigate = useNavigate();
+    
     const handleLogin = (e) => {
         e.preventDefault();
         setError('');
 
         axios.post(process.env.REACT_APP_API_BASE_URL + '/api/auth/login', { username, password })
             .then(response => {
-                // Get the token from the response
                 const token = response.data.token;
                 
-                // Store the token in localStorage
                 localStorage.setItem('adminToken', token);
                 
-                // CORRECTED: Navigate to the admin dashboard page
                 navigate('/admin/dashboard');
             })
             .catch(err => {

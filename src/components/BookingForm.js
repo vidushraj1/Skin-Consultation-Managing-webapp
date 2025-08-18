@@ -16,7 +16,6 @@ function BookingForm({ doctor, onClose, initialTime }) {
         notes: '',
     });
 
-    // Extra states for file upload and submission status
     const [selectedFile, setSelectedFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -43,7 +42,6 @@ function BookingForm({ doctor, onClose, initialTime }) {
 
         let imageUrl = null;
 
-        // Step 1: Upload file if selected
         if (selectedFile) {
             const fileFormData = new FormData();
             fileFormData.append('file', selectedFile);
@@ -61,7 +59,6 @@ function BookingForm({ doctor, onClose, initialTime }) {
             }
         }
 
-        // Step 2: Send booking request
         const bookingRequest = {
             ...formData,
             doctorId: doctor.id,
@@ -116,7 +113,6 @@ function BookingForm({ doctor, onClose, initialTime }) {
                         <textarea name="notes" value={formData.notes} onChange={handleChange}></textarea>
                     </div>
 
-                    {/* New: File Upload */}
                     <div className="form-group">
                         <label>Upload Image (Optional)</label>
                         <input type="file" name="image" onChange={handleFileChange} accept="image/*" />

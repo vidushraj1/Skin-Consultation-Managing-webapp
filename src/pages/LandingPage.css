@@ -23,7 +23,7 @@
 
 .role-selection {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to stack on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
@@ -37,7 +37,7 @@
     color: inherit;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-top: 5px solid transparent; /* Placeholder for the accent color */
+    border-top: 5px solid transparent;
 }
 
 .role-card:hover {
@@ -46,11 +46,11 @@
 }
 
 .role-card.patient-card {
-    border-top-color: #4a90e2; /* Blue accent */
+    border-top-color: #4a90e2; 
 }
 
 .role-card.admin-card {
-    border-top-color: #d0021b; /* Red accent */
+    border-top-color: #d0021b; 
 }
 
 .role-card h2 {

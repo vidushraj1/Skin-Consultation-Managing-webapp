@@ -4,7 +4,6 @@ import './DoctorList.css';
 
 const API_URL = process.env.REACT_APP_API_BASE_URL + '/api/doctors';
 
-// We now accept a prop called 'onBookNow'
 function DoctorList({ onBookNow }) {
     const [doctors, setDoctors] = useState([]);
     const [error, setError] = useState('');
@@ -34,7 +33,6 @@ function DoctorList({ onBookNow }) {
                             <h3>Dr. {doctor.firstName} {doctor.surname}</h3>
                             <p>{doctor.specialisation}</p>
                         </div>
-                        {/* Add the button here */}
                         <button className="dbook-button" onClick={() => onBookNow(doctor)}>
                             Book Now
                         </button>

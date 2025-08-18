@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import apiClient from '../api/api';
-import './AdminDoctorManager.css'; // We can reuse the same CSS
+import './AdminDoctorManager.css';
 
 function AdminPatientManager() {
     const [patients, setPatients] = useState([]);
     const [error, setError] = useState('');
     
-    // --- NEW STATE FOR THE ADD PATIENT FORM ---
     const [newPatient, setNewPatient] = useState({
         firstName: '',
         surname: '',
@@ -42,7 +41,6 @@ function AdminPatientManager() {
         }
     };
 
-    // --- NEW HANDLERS FOR THE FORM ---
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewPatient(prevState => ({ ...prevState, [name]: value }));
@@ -52,8 +50,8 @@ function AdminPatientManager() {
         e.preventDefault();
         apiClient.post('/patients', newPatient)
             .then(() => {
-                fetchPatients(); // Refresh the patient list
-                setNewPatient({ firstName: '', surname: '', dateOfBirth: '', mobileNumber: '' }); // Clear the form
+                fetchPatients();
+                setNewPatient({ firstName: '', surname: '', dateOfBirth: '', mobileNumber: '' });
             })
             .catch(err => {
                 console.error("Error adding patient:", err);
@@ -66,8 +64,7 @@ function AdminPatientManager() {
             <h2>Manage Patients</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            {/* --- NEW ADD PATIENT FORM --- */}
-            <div className="add-doctor-form"> {/* Reusing CSS class */}
+            <div className="add-doctor-form">
                 <h3>Add a New Patient</h3>
                 <form onSubmit={handleAddPatient}>
                     <div className="form-grid">
@@ -91,7 +88,6 @@ function AdminPatientManager() {
                     <button type="submit">Add Patient</button>
                 </form>
             </div>
-            {/* --- END OF NEW FORM --- */}
 
             <h3>Existing Patients</h3>
             <table className="doctor-table">

@@ -21,16 +21,13 @@ function RandomDoctorFinder({ onDoctorFound }) {
         axios.get(process.env.REACT_APP_API_BASE_URL + '/api/doctors/random-available', { params })
             .then(response => {
                 const doctor = response.data;
-                // Pass back both the doctor and the selected time details
                 onDoctorFound(doctor, { startDateTime: dateTime, durationHours: duration });
             })
             .catch(err => {
                 console.error("Error finding doctor:", err.response);
-                // Correctly handle the 404 error from the backend
                 if (err.response && err.response.status === 404) {
                     setError(err.response.data.message);
                 } else {
-                    // Fallback for other potential errors
                     setError("An unexpected error occurred while searching.");
                 }
             })

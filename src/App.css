@@ -5,7 +5,7 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #f4f7f6; /* A soft, light grey background */
+    background-color: #f4f7f6; 
 }
 
 .App {
@@ -13,7 +13,7 @@ body {
 }
 
 .App header {
-    background-color: #4a90e2; /* A modern blue for the header */
+    background-color: #4a90e2;
     padding: 20px;
     color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -21,6 +21,6 @@ body {
 
 .App main {
     max-width: 1200px;
-    margin: 0 auto; /* Center the main content */
+    margin: 0 auto; 
     padding: 20px;
 }

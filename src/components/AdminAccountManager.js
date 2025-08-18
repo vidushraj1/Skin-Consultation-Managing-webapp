@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import apiClient from '../api/api';
-import './AdminDoctorManager.css'; // Reusing CSS again
+import './AdminDoctorManager.css';
 
 function AdminAccountManager() {
     const [admins, setAdmins] = useState([]);
@@ -29,8 +29,8 @@ function AdminAccountManager() {
         e.preventDefault();
         apiClient.post('/admins', newAdmin)
             .then(() => {
-                fetchAdmins(); // Refresh the list
-                setNewAdmin({ username: '', password: '' }); // Clear the form
+                fetchAdmins();
+                setNewAdmin({ username: '', password: '' });
             })
             .catch(err => {
                 console.error("Error adding admin:", err.response);
@@ -56,7 +56,6 @@ function AdminAccountManager() {
             <h2>Manage Admin Accounts</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            {/* --- THIS IS THE MISSING FORM --- */}
             <div className="add-doctor-form">
                 <h3>Add a New Admin</h3>
                 <form onSubmit={handleAddAdmin}>
@@ -73,7 +72,6 @@ function AdminAccountManager() {
                     <button type="submit">Add Admin</button>
                 </form>
             </div>
-            {/* --- END OF MISSING FORM --- */}
 
             <h3>Existing Admins</h3>
             <table className="doctor-table">

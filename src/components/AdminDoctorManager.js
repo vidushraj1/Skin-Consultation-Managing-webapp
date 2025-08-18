@@ -4,12 +4,10 @@ import './AdminDoctorManager.css';
 
 const DOCTORS_URL = '/doctors';
 
-// The component accepts the 'onBookNow' function as a prop from AdminView
 function AdminDoctorManager({ onBookNow }) {
     const [doctors, setDoctors] = useState([]);
     const [error, setError] = useState('');
     
-    // State for the "Add Doctor" form inputs
     const [newDoctor, setNewDoctor] = useState({
         firstName: '',
         surname: '',
@@ -71,7 +69,6 @@ function AdminDoctorManager({ onBookNow }) {
             <h2>Manage Doctors</h2>
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
-            {/* --- FULL "ADD DOCTOR" FORM RESTORED --- */}
             <div className="add-doctor-form">
                 <h3>Add a New Doctor</h3>
                 <form onSubmit={handleAddDoctor}>
@@ -104,10 +101,7 @@ function AdminDoctorManager({ onBookNow }) {
                     <button type="submit">Add Doctor</button>
                 </form>
             </div>
-            {/* --- END OF RESTORED FORM --- */}
 
-
-            {/* Table displaying all doctors */}
             <table className="doctor-table">
                 <thead>
                     <tr>
@@ -129,10 +123,8 @@ function AdminDoctorManager({ onBookNow }) {
                             <td>{doctor.medicalLicenceNumber}</td>
                             <td>{doctor.specialisation}</td>
                             
-                            {/* The actions cell */}
                             <td style={{display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center'}}>
                                 
-                                {/* Add the 'action-button' class to both buttons */}
                                 <button className="delete-button action-button" onClick={() => handleDeleteDoctor(doctor.id)}>
                                     Delete
                                 </button>

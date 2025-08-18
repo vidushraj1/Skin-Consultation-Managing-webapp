@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // We use generic axios here, as it's a public endpoint
+import axios from 'axios';
 import './BookingHistory.css';
 
 function BookingHistory() {
@@ -12,7 +12,7 @@ function BookingHistory() {
         e.preventDefault();
         setError('');
         setSearched(true);
-        setConsultations([]); // Clear previous results
+        setConsultations([]);
 
         axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/patients/consultations?mobileNumber=${mobileNumber}`)
             .then(response => {
@@ -56,7 +56,6 @@ function BookingHistory() {
                         <p><strong>Notes:</strong> {consult.notes}</p>
                         <p><strong>Cost:</strong> £{consult.cost.toFixed(2)}</p>
                         
-                        {/* --- NEW: Conditionally render the image --- */}
                         {consult.imageUrl && (
                             <div>
                                 <strong>Attachment:</strong> <br />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import apiClient from '../api/api';
-import './AdminDoctorManager.css'; // Reuse the table styles
+import './AdminDoctorManager.css';
 
 function AdminConsultationManager() {
     const [consultations, setConsultations] = useState([]);
@@ -51,7 +51,7 @@ function AdminConsultationManager() {
                         <th>Patient Name</th>
                         <th>Doctor Name</th>
                         <th>Cost (£)</th>
-                        <th>Image</th> {/* NEW column */}
+                        <th>Image</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -64,7 +64,6 @@ function AdminConsultationManager() {
                             <td>Dr. {consult.doctor.firstName} {consult.doctor.surname}</td>
                             <td>{consult.cost.toFixed(2)}</td>
                             <td>
-                                {/* --- NEW: Conditionally render the image link --- */}
                                 {consult.imageUrl && (
                                     <a href={consult.imageUrl} target="_blank" rel="noopener noreferrer">
                                         View Image
