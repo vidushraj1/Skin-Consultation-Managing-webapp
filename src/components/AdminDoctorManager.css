@@ -1,0 +1,130 @@
+/* Main container for the management sections */
+.admin-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* General table styling */
+.doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.doctor-table th, .doctor-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle; /* Ensures content in cells is vertically centered */
+}
+
+.doctor-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.doctor-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.doctor-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Flexbox container for the action buttons to align them and add space */
+.doctor-table .actions-cell {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* --- FINAL BUTTON STYLES --- */
+
+/* Final style for the red "Delete" button */
+.delete-button {
+    background-color: #dc3545; /* Standard Bootstrap danger red */
+    color: white;
+    padding: 10px 16px; /* Increased padding for a larger size */
+    border: none;
+    border-radius: 6px; /* Slightly more rounded corners */
+    cursor: pointer;
+    font-weight: 500; /* Medium font weight for a clean look */
+    font-size: 14px;
+    transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Final style for the green "Book for Patient" button */
+.book-button {
+    background-color: #28a745; /* Standard Bootstrap success green */
+    color: white;
+    padding: 10px 16px; /* Increased padding, matching the delete button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.book-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* --- FORM STYLES --- */
+
+.add-doctor-form {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.add-doctor-form h3 {
+    margin-top: 0;
+}
+
+.add-doctor-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.add-doctor-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-doctor-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.add-doctor-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* This targets the submit button specifically inside the form */
+.add-doctor-form button[type="submit"] {
+    margin-top: 15px;
+    background-color: #007bff; /* A standard blue for primary actions */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.add-doctor-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

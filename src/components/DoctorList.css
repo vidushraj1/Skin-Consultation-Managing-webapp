@@ -1,0 +1,60 @@
+/* Container for the whole doctor list section */
+.doctor-list-container {
+    padding: 20px;
+}
+
+/* The grid that will hold all the doctor cards */
+.doctor-grid {
+    display: grid;
+    /* Create 3 columns of equal size, but let them shrink if the screen is too small */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Space between the cards */
+    list-style-type: none; /* Remove the default bullet points */
+    padding: 0;
+}
+
+/* Styling for each individual doctor card */
+.doctor-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a "lifting" effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    border-left: 5px solid #4a90e2; /* Accent color bar */
+}
+
+/* Make the card lift and shadow increase on hover for a nice interactive feel */
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the doctor's name */
+.doctor-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Styling for the doctor's specialization */
+.doctor-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 0;
+}
+
+/* Style for the "Book Now" button */
+.dbook-button {
+    background-color: #4CAF50; /* A nice green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px; /* Add some space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
