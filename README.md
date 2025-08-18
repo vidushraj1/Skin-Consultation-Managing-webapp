@@ -6,6 +6,8 @@ This project is a complete modernization of an original Java Swing desktop appli
 
 The initial project was a university coursework assignment designed to demonstrate Object-Oriented Programming (OOP) principles in Java. It functioned as a skin consultation management system with two distinct user experiences.
 
+this is the old repo link: https://github.com/vidushraj1/Skin-Consultation-Managing-Program
+
 ### Original Functionality
 
 *   **Administrator CLI:** A Command-Line Interface (CLI) for managers to perform administrative tasks. This included adding new doctors, deleting doctors by their medical license number, and saving the list of doctors to a local file for data persistence.
@@ -25,6 +27,8 @@ The initial project was a university coursework assignment designed to demonstra
 ## The Modernization: A Full-Stack Cloud Application
 
 The goal of this refactoring process was to address the limitations of the original application (e.g., single-user design, fragile data persistence, outdated UI) and re-engineer it as a professional, multi-user, and scalable web service.
+
+this is the product live webpage: https://vidushraj1.github.io/Skin-Consultation-Managing-webapp/
 
 ### New Features & Improvements
 
