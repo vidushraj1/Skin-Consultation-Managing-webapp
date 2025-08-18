@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Skin-Consultation-Managing-webapp/static/css/main.302e9fdf.css",
+    "main.js": "/Skin-Consultation-Managing-webapp/static/js/main.28c15a67.js",
+    "index.html": "/Skin-Consultation-Managing-webapp/index.html",
+    "main.302e9fdf.css.map": "/Skin-Consultation-Managing-webapp/static/css/main.302e9fdf.css.map",
+    "main.28c15a67.js.map": "/Skin-Consultation-Managing-webapp/static/js/main.28c15a67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.302e9fdf.css",
+    "static/js/main.28c15a67.js"
+  ]
+}
