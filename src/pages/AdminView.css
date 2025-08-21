@@ -1,0 +1,22 @@
+.admin-tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px; 
+}
+
+.tab-button.active {
+    border-bottom: 3px solid #4a90e2;
+    font-weight: bold;
+    color: #4a90e2;
+}
