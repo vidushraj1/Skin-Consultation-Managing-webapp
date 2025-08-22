@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Skin-Consultation-Managing-webapp/static/css/main.302e9fdf.css",
+    "main.css": "/Skin-Consultation-Managing-webapp/static/css/main.d5373f8d.css",
     "main.js": "/Skin-Consultation-Managing-webapp/static/js/main.2404e7cc.js",
     "index.html": "/Skin-Consultation-Managing-webapp/index.html",
-    "main.302e9fdf.css.map": "/Skin-Consultation-Managing-webapp/static/css/main.302e9fdf.css.map",
+    "main.d5373f8d.css.map": "/Skin-Consultation-Managing-webapp/static/css/main.d5373f8d.css.map",
     "main.2404e7cc.js.map": "/Skin-Consultation-Managing-webapp/static/js/main.2404e7cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.302e9fdf.css",
+    "static/css/main.d5373f8d.css",
     "static/js/main.2404e7cc.js"
   ]
 }
