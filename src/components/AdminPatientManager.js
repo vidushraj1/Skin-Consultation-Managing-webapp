@@ -59,6 +59,14 @@ function AdminPatientManager() {
             });
     };
 
+    // Helper function to shorten the ID string
+    const truncateId = (id) => {
+        if (id.length > 8) {
+            return id.substring(0, 8) + '...';
+        }
+        return id;
+    };
+
     return (
         <div className="admin-container">
             <h2>Manage Patients</h2>
@@ -104,7 +112,7 @@ function AdminPatientManager() {
                 <tbody>
                     {patients.map(patient => (
                         <tr key={patient.id}>
-                            <td>{patient.id}</td>
+                            <td title={patient.id}>{truncateId(patient.id)}</td>
                             <td>{patient.firstName}</td>
                             <td>{patient.surname}</td>
                             <td>{patient.dateOfBirth}</td>

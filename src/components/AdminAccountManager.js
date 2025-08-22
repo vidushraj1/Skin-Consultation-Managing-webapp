@@ -51,6 +51,14 @@ function AdminAccountManager() {
         }
     };
 
+    // Helper function to shorten the ID string
+    const truncateId = (id) => {
+        if (id.length > 8) {
+            return id.substring(0, 8) + '...';
+        }
+        return id;
+    };
+
     return (
         <div className="admin-container">
             <h2>Manage Admin Accounts</h2>
@@ -85,7 +93,7 @@ function AdminAccountManager() {
                 <tbody>
                     {admins.map(admin => (
                         <tr key={admin.id}>
-                            <td>{admin.id}</td>
+                            <td title={admin.id}>{truncateId(admin.id)}</td>
                             <td>{admin.username}</td>
                             <td>
                                 <button className="delete-button" onClick={() => handleDeleteAdmin(admin.id)}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import apiClient from '../api/api'; 
+import apiClient from '../api/api';
 import './AdminDoctorManager.css';
 
 const DOCTORS_URL = '/doctors';
@@ -64,6 +64,14 @@ function AdminDoctorManager({ onBookNow }) {
         }
     };
 
+    // Helper function to shorten the ID string
+    const truncateId = (id) => {
+        if (id.length > 8) {
+            return id.substring(0, 8) + '...';
+        }
+        return id;
+    };
+
     return (
         <div className="admin-container">
             <h2>Manage Doctors</h2>
@@ -117,7 +125,7 @@ function AdminDoctorManager({ onBookNow }) {
                 <tbody>
                     {doctors.map(doctor => (
                         <tr key={doctor.id}>
-                            <td>{doctor.id}</td>
+                            <td title={doctor.id}>{truncateId(doctor.id)}</td>
                             <td>{doctor.firstName}</td>
                             <td>{doctor.surname}</td>
                             <td>{doctor.medicalLicenceNumber}</td>

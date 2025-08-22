@@ -39,6 +39,14 @@ function AdminConsultationManager() {
         return new Date(dateString).toLocaleDateString(undefined, options);
     };
 
+    // Helper function to shorten the ID string
+    const truncateId = (id) => {
+        if (id.length > 8) {
+            return id.substring(0, 8) + '...';
+        }
+        return id;
+    };
+
     return (
         <div className="admin-container">
             <h2>Manage All Consultations</h2>
@@ -58,7 +66,7 @@ function AdminConsultationManager() {
                 <tbody>
                     {consultations.map(consult => (
                         <tr key={consult.id}>
-                            <td>{consult.id}</td>
+                            <td title={consult.id}>{truncateId(consult.id)}</td>
                             <td>{formatDate(consult.startDateTime)}</td>
                             <td>{consult.patient.firstName} {consult.patient.surname}</td>
                             <td>Dr. {consult.doctor.firstName} {consult.doctor.surname}</td>
