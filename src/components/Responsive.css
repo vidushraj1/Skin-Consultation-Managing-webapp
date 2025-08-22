@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+    .admin-tabs {
+        flex-direction: column;
+    }
+
+    .doctor-table, .doctor-table thead, .doctor-table tbody, .doctor-table th, .doctor-table td, .doctor-table tr {
+        display: block;
+    }
+
+    .doctor-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .doctor-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+    }
+
+    .doctor-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: left;
+    }
+
+    .doctor-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .doctor-table td:nth-of-type(1):before { content: "ID"; }
+    .doctor-table td:nth-of-type(2):before { content: "First Name"; }
+    .doctor-table td:nth-of-type(3):before { content: "Surname"; }
+    .doctor-table td:nth-of-type(4):before { content: "Licence Number"; }
+    .doctor-table td:nth-of-type(5):before { content: "Specialisation"; }
+    .doctor-table td:nth-of-type(6):before { content: "Actions"; }
+
+    .add-doctor-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .role-selection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .login-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .doctor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .history-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .finder-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .App main {
+        padding: 10px;
+    }
+}
