@@ -91,8 +91,7 @@ The React frontend is publicly available in this repository. To run it locally a
 **Running the Frontend:**
 1.  Navigate to the `skin-consultation-frontend` directory.
 2.  Create a `.env` file in the root of the frontend project.
-3.  Inside the `.env` file, add the following line, pointing to the backend's base URL: 'REACT_APP_API_BASE_URL=http://localhost:8080'
-    *(To test against the live version, you can replace `http://localhost:8080` with the actual Cloud Run service URL.)*
-4.  Install dependencies: 'npm install'
-5.  Start the development server: 'npm start'
+3.  Inside the `.env` file, add the following line, pointing to the backend's base URL: `REACT_APP_API_BASE_URL=http://localhost:8080` *(To test against the live version, you can replace `http://localhost:8080` with the actual Cloud Run service URL.)*
+4.  Install dependencies: `npm install`
+5.  Start the development server: `npm start`
 6.  The frontend will be running on `http://localhost:3000`.
